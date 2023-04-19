@@ -1,6 +1,6 @@
 //React imports
 import React, {useState,useEffect} from 'react';
-import {BrowserRouter,Routes,Route} from "react-router-dom";
+import {HashRouter,Routes,Route,BrowserRouter} from "react-router-dom";
 //mui imports
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';

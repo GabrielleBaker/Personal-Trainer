@@ -28,12 +28,12 @@ export default function HomePage(){
           href:"/CustomerList"
         },
         {
-            img: 'calendar.jpg',
+            img: '/calendar.jpg',
             title: 'Calendar',
             href:"/Calendar"
           },
         {
-          img: 'stats2.jpg',
+          img: '/stats2.jpg',
           title: 'Statistics',
           href:"/Stats"
         },
