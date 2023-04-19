@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Personal-Trainer/static/css/main.661675c2.css",
+    "main.js": "/Personal-Trainer/static/js/main.d834c1bd.js",
+    "static/js/787.22709206.chunk.js": "/Personal-Trainer/static/js/787.22709206.chunk.js",
+    "index.html": "/Personal-Trainer/index.html",
+    "main.661675c2.css.map": "/Personal-Trainer/static/css/main.661675c2.css.map",
+    "main.d834c1bd.js.map": "/Personal-Trainer/static/js/main.d834c1bd.js.map",
+    "787.22709206.chunk.js.map": "/Personal-Trainer/static/js/787.22709206.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.661675c2.css",
+    "static/js/main.d834c1bd.js"
+  ]
+}
