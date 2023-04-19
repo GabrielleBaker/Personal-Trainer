@@ -233,7 +233,7 @@ export default function PersistentDrawerLeft() {
     <Main open={open}>
       <DrawerHeader />
       
-      <BrowserRouter className="navigate">
+      <HashRouter>
       <Routes>
             <Route path="/HomePage" element={<HomePage />} />
             <Route exact path="/" element={<HomePage />}/>
@@ -242,7 +242,7 @@ export default function PersistentDrawerLeft() {
             <Route path="/Calendar" element={<Calendar />} />
             <Route path="/Stats" element={<Statistics />} />
         </Routes>
-          </BrowserRouter>
+          </HashRouter>
     </Main>
   </Box>
   ); 

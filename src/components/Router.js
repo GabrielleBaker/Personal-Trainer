@@ -23,7 +23,7 @@ export default function Nav(){
     
     return (
     
-        <BrowserRouter className="navigate">
+        <HashRouter >
             <Link to="/CustomerList">Customers</Link>{' '}
             <Link to="/Trainings">Training Sessions</Link>{' '}
             <Link to=' '>HomePage</Link>{' '}
@@ -40,5 +40,5 @@ export default function Nav(){
                 <Route exact path="/Calendar" element={<Calendar />}/>
                 <Route exact path="/Stats" element={<Statistics />}/>
             </Routes>
-        </BrowserRouter>)
+        </HashRouter>)
 }
