@@ -18,24 +18,24 @@ export default function HomePage(){
     //data for imagelist-menu
     const itemData = [
         {
-          img: '/training3.jpg',
+          img: process.env.PUBLIC_URL +'/training3.jpg',
           title: 'Trainings',
           href:"https://gabriellebaker.github.io/Personal-Trainer/#/Trainings",
         },
         {
           img: '/customers.jpg',
           title: 'Customers',
-          href:"https://gabriellebaker.github.io/Personal-Trainer/CustomerList"
+          href:"https://gabriellebaker.github.io/Personal-Trainer/#/CustomerList"
         },
         {
             img: '/calendar.jpg',
             title: 'Calendar',
-            href:"/Calendar"
+            href:"https://gabriellebaker.github.io/Personal-Trainer/#/Calendar"
           },
         {
           img: '/stats2.jpg',
           title: 'Statistics',
-          href:"/Stats"
+          href:"https://gabriellebaker.github.io/Personal-Trainer/#/Stats"
         },
         
       ];
