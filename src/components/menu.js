@@ -133,7 +133,7 @@ export default function PersistentDrawerLeft() {
           variant="h6" 
           color="white" 
           noWrap component="a" 
-          href="/HomePage">
+          href="/">
             Personal Trainer App
         </Typography>
       </Toolbar>

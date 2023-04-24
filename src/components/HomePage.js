@@ -10,7 +10,6 @@ import Date from './Date';
 import Quotes from './Quotes';
 import './Quotes';
 import Weather from './Weather';
-import Nav from './Router'
 export default function HomePage(){
 
     //image list adapted from: 
