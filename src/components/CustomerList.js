@@ -134,7 +134,8 @@ ModuleRegistry.registerModules([ClientSideRowModelModule, CsvExportModule]);
 
 //get data from api to populate table
     const getCustomers = () =>{
-        fetch('http://traineeapp.azurewebsites.net/api/customers')
+        //fetch('http://traineeapp.azurewebsites.net/api/customers')
+        fetch('https://gabriellebaker.github.io/Personal-Trainer/api/customers')
         .then(response=>{
             if(response.ok){
                 return response.json();
@@ -148,7 +149,8 @@ ModuleRegistry.registerModules([ClientSideRowModelModule, CsvExportModule]);
 
 //save a new customer
     const saveCustomer=(customer)=>{
-        fetch('http://traineeapp.azurewebsites.net/api/customers',{
+        //fetch('http://traineeapp.azurewebsites.net/api/customers',{
+        fetch('https://gabriellebaker.github.io/Personal-Trainer/api/customers',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

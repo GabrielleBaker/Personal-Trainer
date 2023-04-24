@@ -20,12 +20,12 @@ export default function HomePage(){
         {
           img: '/training3.jpg',
           title: 'Trainings',
-          href:"/Trainings",
+          href:"https://gabriellebaker.github.io/Personal-Trainer/#/Trainings",
         },
         {
           img: '/customers.jpg',
           title: 'Customers',
-          href:"/CustomerList"
+          href:"https://gabriellebaker.github.io/Personal-Trainer/CustomerList"
         },
         {
             img: '/calendar.jpg',
