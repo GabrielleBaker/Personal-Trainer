@@ -17,25 +17,26 @@ export default function HomePage(){
     
     //data for imagelist-menu
     const itemData = [
-        {
-          img: process.env.PUBLIC_URL +'/training3.jpg',
-          title: 'Trainings',
-          href:"https://gabriellebaker.github.io/Personal-Trainer/#/Trainings",
+        {   //must find the public folder for gh pages deployment to find img
+            img: process.env.PUBLIC_URL +'/training3.jpg',
+            title: 'Trainings',
+            //must use this url for link to work
+            href:"https://gabriellebaker.github.io/Personal-Trainer/#/Trainings",
         },
         {
-          img: '/customers.jpg',
-          title: 'Customers',
-          href:"https://gabriellebaker.github.io/Personal-Trainer/#/CustomerList"
+            img: process.env.PUBLIC_URL +'/customers.jpg',
+            title: 'Customers',
+            href:"https://gabriellebaker.github.io/Personal-Trainer/#/CustomerList"
         },
         {
-            img: '/calendar.jpg',
+            img: process.env.PUBLIC_URL +'/calendar.jpg',
             title: 'Calendar',
             href:"https://gabriellebaker.github.io/Personal-Trainer/#/Calendar"
           },
         {
-          img: '/stats2.jpg',
-          title: 'Statistics',
-          href:"https://gabriellebaker.github.io/Personal-Trainer/#/Stats"
+            img: process.env.PUBLIC_URL +'/stats2.jpg',
+            title: 'Statistics',
+            href:"https://gabriellebaker.github.io/Personal-Trainer/#/Stats"
         },
         
       ];

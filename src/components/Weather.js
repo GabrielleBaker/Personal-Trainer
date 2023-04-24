@@ -9,9 +9,8 @@ export default function Weather(){
 
         //get weather info from api
         React.useEffect(() => {
-           // fetch('http://api.openweathermap.org/data/2.5/weather?q=Helsinki,fi&units=metric&APPID=5a00724f1104fa2953b06e8198eadca9')
-           fetch('https://gabriellebaker.github.io/Personal-Trainer/api.openweathermap.org/data/2.5/weather?q=Helsinki,fi&units=metric&APPID=5a00724f1104fa2953b06e8198eadca9')
-           .then(response => response.json())
+            fetch('https://api.openweathermap.org/data/2.5/weather?q=Helsinki,fi&units=metric&APPID=5a00724f1104fa2953b06e8198eadca9')
+            .then(response => response.json())
             .then(responseData => {
               setTemperature(responseData.main.temp);
               setWeather(responseData.weather[0].description);
@@ -19,7 +18,7 @@ export default function Weather(){
         })
         .catch(err => console.error(err))
       })
-      const imgUrl = 'https://gabriellebaker.github.io/Personal-Trainer/openweathermap.org/img/wn/' + image + '.png';
+      const imgUrl = 'https://openweathermap.org/img/wn/' + image + '.png';
 
           return(
             <div> 
