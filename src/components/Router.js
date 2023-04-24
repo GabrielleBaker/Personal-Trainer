@@ -1,6 +1,5 @@
 //React imports
 import {
-    BrowserRouter,
     HashRouter,
     Routes,
     Route,
@@ -26,19 +25,18 @@ export default function Nav(){
         <HashRouter >
             <Link to="/CustomerList">Customers</Link>{' '}
             <Link to="/Trainings">Training Sessions</Link>{' '}
-            <Link to=' '>HomePage</Link>{' '}
             <Link to='/'>HomePage</Link>{' '}
-            <Link to='/HomePage'>HomePage</Link>{' '}
+            
             <Link to='/Calendar'>Calendar</Link>{' '}
             <Link to='/Stats'>Statistics</Link>{' '}
 
             <Routes>
                 <Route path="/CustomerList" element={<Customerapp />} />
                 <Route path="/Trainings" element={<Trainings />} />
-                <Route path="/HomePage" element={<HomePage />}/>
+                
                 <Route exact path="/" element={<HomePage />}/>
-                <Route exact path="/Calendar" element={<Calendar />}/>
-                <Route exact path="/Stats" element={<Statistics />}/>
+                <Route path="/Calendar" element={<Calendar />}/>
+                <Route path="/Stats" element={<Statistics />}/>
             </Routes>
         </HashRouter>)
 }

@@ -1,6 +1,6 @@
 //React imports
 import React, {useState,useEffect} from 'react';
-import {HashRouter,Routes,Route,BrowserRouter} from "react-router-dom";
+import {HashRouter,Routes,Route,Link,} from "react-router-dom";
 //mui imports
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -106,6 +106,7 @@ export default function PersistentDrawerLeft() {
   
 
   return(
+    <HashRouter>
     <Box 
       sx={{ 
         display: 'flex' , 
@@ -170,12 +171,13 @@ export default function PersistentDrawerLeft() {
                  /> }
               </ListItemIcon>
               <ListItemText 
-                primary="Home" />
+                 />
+                 <Link to='/'>Home</Link>{' '}
               <ListItemText  />
               </ListItemButton>
           </ListItem>
           <ListItem>
-            <ListItemButton component="a" href="/Trainings">
+            <ListItemButton >
               <ListItemIcon>
                 {  
                 //using mdi icons
@@ -184,12 +186,13 @@ export default function PersistentDrawerLeft() {
                 color="#e60099"/>
                  }
               </ListItemIcon>
-              <ListItemText primary="Training Log" />
+              <ListItemText  />
+              <Link to="/Trainings">Training</Link>{' '}
               <ListItemText  />
               </ListItemButton>
           </ListItem>
           <ListItem>
-            <ListItemButton component="a" href="/CustomerList">
+            <ListItemButton >
               <ListItemIcon>
                 {  
                 <Icon path={mdiAccount}
@@ -197,12 +200,13 @@ export default function PersistentDrawerLeft() {
                 color="#e60099"/> 
                  }
               </ListItemIcon>
-                <ListItemText primary="Customers" />
+                <ListItemText  />
+                <Link to="/CustomerList">Customers</Link>{' '}
                 <ListItemText/>
               </ListItemButton>
           </ListItem>
           <ListItem>
-            <ListItemButton component="a" href="/Calendar">
+            <ListItemButton >
               <ListItemIcon>
                 {  
                 <Icon path={mdiCalendarMonth}  
@@ -210,12 +214,13 @@ export default function PersistentDrawerLeft() {
                 color="#e60099"/> 
                  }
               </ListItemIcon>
-                <ListItemText primary="Calendar" />
+                <ListItemText />
+                <Link to='/Calendar'>Calendar</Link>{' '}
                 <ListItemText/>
               </ListItemButton>
           </ListItem>
           <ListItem>
-            <ListItemButton component="a" href="/Stats">
+            <ListItemButton >
               <ListItemIcon>
                 {  
                 <Icon path={mdiChartLine}
@@ -223,7 +228,8 @@ export default function PersistentDrawerLeft() {
                 color="#e60099"/> 
                  }
               </ListItemIcon>
-                <ListItemText primary="Statistics" />
+                <ListItemText />
+                <Link to='/Stats'>Statistics</Link>{' '}
                 <ListItemText/>
               </ListItemButton>
           </ListItem>
@@ -233,17 +239,16 @@ export default function PersistentDrawerLeft() {
     <Main open={open}>
       <DrawerHeader />
       
-      <HashRouter>
       <Routes>
-            <Route path="/HomePage" element={<HomePage />} />
             <Route exact path="/" element={<HomePage />}/>
             <Route path="/CustomerList" element={<Customerapp />} />
             <Route path="/Trainings" element={<Trainings />} />
             <Route path="/Calendar" element={<Calendar />} />
             <Route path="/Stats" element={<Statistics />} />
         </Routes>
-          </HashRouter>
+          
     </Main>
   </Box>
+  </HashRouter>
   ); 
 }
