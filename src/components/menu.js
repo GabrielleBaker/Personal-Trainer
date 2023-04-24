@@ -159,9 +159,7 @@ export default function PersistentDrawerLeft() {
         <Divider />
         <List>
           <ListItem>
-            <ListItemButton 
-            component="a" 
-            href="/HomePage">
+            <ListItemButton >
               <ListItemIcon>
                 {  <HomeIcon 
                     sx={{ 

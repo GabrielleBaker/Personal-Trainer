@@ -120,7 +120,7 @@ ModuleRegistry.registerModules([ClientSideRowModelModule, CsvExportModule]);
     
 //saveTraining function to be sent to the addTrainings component via the addTrainings button
     const saveTraining=(training)=>{
-        fetch('http://traineeapp.azurewebsites.net/api/trainings',{
+        fetch('https://traineeapp.azurewebsites.net/api/trainings',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
