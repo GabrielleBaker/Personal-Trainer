@@ -161,7 +161,18 @@ ModuleRegistry.registerModules([ClientSideRowModelModule, CsvExportModule]);
     }
 //update an existing customer -use PUT method, sent to edit C via props
     const updateCustomer=(customer,link)=>{
-        fetch(link,{
+        //first get customer id from link, this is important for gh pages
+        //gh pages only works with https, api gives an http address so we cant just use the link directly
+        const url = link
+            let custId = "";
+            for (let i =url.length -1;i>=0;i--){
+                if (/\d/.test(url[i])) {
+                    custId = url[i] + custId;
+                  } else {
+                    break;
+                  }
+            }
+        fetch('http://traineeapp.azurewebsites.net/api/customers/'+custId,{
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -176,9 +187,20 @@ ModuleRegistry.registerModules([ClientSideRowModelModule, CsvExportModule]);
 //delete a customer, link is params which is sent in column defs
 //uses customer's unique id in their href link in order to find and delete them
     const deleteCustomer =(link)=>{
+        //first get the customer id from the customer url which the api gives
+        //this is necessary for gh pages, as the api gives a url in http not https
+        //and gh pages cant use http
+        const url = link.data.links[0].href
+            let custId = "";
+            for (let i =url.length -1;i>=0;i--){
+                if (/\d/.test(url[i])) {
+                    custId = url[i] + custId;
+                  } else {
+                    break;
+                  }
+            }
         if(window.confirm('Are you sure?')){
-            //follow this path to access the link which contains customer id
-        fetch(link.data.links[0].href,{method:'DELETE'})
+        fetch('https://traineeapp.azurewebsites.net/api/customers/'+custId,{method:'DELETE'}) 
         .then(response=>{
             if(response.ok){
                 setOpen(true);
@@ -191,18 +213,9 @@ ModuleRegistry.registerModules([ClientSideRowModelModule, CsvExportModule]);
         .catch(err=> console.log(err))
     }}
 
-    //EXPORT functionality
-    /*let gridApi;
-
-    const onGridReady=params=>{
-        gridApi=params.api
-       // console.dir(gridApi)
-    }*/
-
+    //export
     function onExportClick() {
-       // console.dir(gridApi)
         gridRef.current.api.exportDataAsCsv();
-      //  gridApi.exportDataAsCsv();
       }
       const gridRef = useRef();
       

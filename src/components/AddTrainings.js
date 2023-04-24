@@ -48,8 +48,20 @@ export default function AddTraining(props){
         });
 
     //set customerlink (this link is what links the new training to the customer)
-        setCustomerLink(props.params.links[0].href);
-        
+    //must get customer id from the url
+        const url = props.params.links[0].href
+       // console.log(url)
+        let custId = "";
+            for (let i =url.length -1;i>=0;i--){
+                if (/\d/.test(url[i])) {
+                    custId = url[i] + custId;
+                  } else {
+                    break;
+                  }
+            }
+            //console.log(custId)
+        setCustomerLink('http://traineeapp.azurewebsites.net/api/customers/'+custId);
+        //console.log(customerLink)
     //use ready so we only work with the customer link once its been established
         setReady(true);
       };
